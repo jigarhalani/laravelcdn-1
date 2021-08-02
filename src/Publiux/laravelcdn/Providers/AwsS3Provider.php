@@ -171,7 +171,8 @@ class AwsS3Provider extends Provider implements ProviderInterface
         // user terminal message
         $this->console->writeln('<fg=yellow>Comparing local files and bucket...</fg=yellow>');
 
-        $assets = $this->getFilesAlreadyOnBucket($assets);
+        // commenting this change as its taking too much time for our job
+        //$assets = $this->getFilesAlreadyOnBucket($assets);
 
         // upload each asset file to the CDN
         if (count($assets) > 0) {
